@@ -79,7 +79,7 @@ The blade geometry is generated parametrically from a set of design parameters:
 
 The blade planform is generated using a linear chord distribution, while the aerodynamic twist distribution is calculated from the specified design tip-speed ratio and design angle of attack.
 
-The geometry generation routine calculates the blade planform area, root chord, tip chord, and twist distribution. :contentReference[oaicite:1]{index=1}
+The geometry generation routine calculates the blade planform area, root chord, tip chord, and twist distribution.
 
 ---
 
@@ -93,9 +93,9 @@ The `loadPolar.m` function reads CSV files containing:
 - Lift coefficient, `CL`
 - Drag coefficient, `CD`
 
-The data is sorted, cleaned, and converted into interpolation functions for use by the BEM solver. :contentReference[oaicite:2]{index=2}
+The data is sorted, cleaned, and converted into interpolation functions for use by the BEM solver.
 
-The current example uses an SG6043 aerofoil polar at approximately Re = 100,000. The polar filename is specified in `main_BEM.m`. :contentReference[oaicite:3]{index=3}
+The current example uses an SG6043 aerofoil polar at approximately Re = 100,000. The polar filename is specified in `main_BEM.m`.
 
 ---
 
@@ -115,7 +115,7 @@ The current example uses the following design parameters:
 | Design wind speed | 10 m/s |
 | Air density | 1.225 kg/m³ |
 
-These parameters can be modified directly in `main_BEM.m`. :contentReference[oaicite:4]{index=4}
+These parameters can be modified directly in `main_BEM.m`.
 
 ---
 
@@ -139,15 +139,14 @@ The analysis produces information including:
 - Rotor power
 - Rotor torque
 
-The implementation also reports the number of blade elements that successfully converged. :contentReference[oaicite:5]{index=5}
+The implementation also reports the number of blade elements that successfully converged. 
 
 ### Tip-Speed-Ratio Sweep
 
 The `sweepLambda.m` function evaluates the rotor over a range of tip-speed ratios while maintaining a constant wind speed.
 
-This allows the rotor's power coefficient, `CP`, to be plotted against tip-speed ratio and the operating point corresponding to maximum power coefficient to be identified. :contentReference[oaicite:6]{index=6}
+This allows the rotor's power coefficient, `CP`, to be plotted against tip-speed ratio and the operating point corresponding to maximum power coefficient to be identified. 
 
 The current implementation evaluates:
 
-```text
 λ = 0.5 → 8
